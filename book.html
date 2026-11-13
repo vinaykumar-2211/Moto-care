@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoCare | Book Your Motorcycle Service</title>
+
+    <link rel="icon" type="image/png" sizes="64x64" href="images/logo3.png">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="book.css">
+    <link rel="stylesheet" href="header&footer.css">
+</head>
+
+<body>
+
+<div class="booking-top-controls">
+
+    <button class="Rtl-toggle" id="rtl-toggle" type="button"
+        title="Toggle RTL">
+        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+    </button>
+
+    <button class="theme-toggle" id="theme-toggle" type="button"
+        title="Toggle Dark Mode">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+</div>
+
+<section class="booking-section">
+
+    <div class="booking-container">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                <a href="index.html">
+                    <img src="images/logo4.png" alt="MotoCare Logo">
+                </a>
+                <h3>Moto <span>Care</span></h3>
+                <hr>
+                <p>Motorcycle Services & Repairing</p>
+            </div>
+                
+
+        </div>
+
+        <p class="breadcrumb">MOTO CARE / BOOK YOUR SERVICE</p>
+
+        <h2>Book Your Motorcycle Service</h2>
+
+        <p class="intro">
+            Keep your motorcycle running smoothly with professional care.
+            Choose your service and preferred time, and our team will contact you.
+        </p>
+
+        <div class="notice">
+            Please provide your details below. Our team will review your request
+            and contact you to confirm your service appointment.
+        </div>
+
+        <form id="bookingForm">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name"
+                        placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email"
+                        placeholder="Enter your email address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone"
+                        placeholder="Enter your 10-digit phone number"
+                        pattern="[0-9]{10}" maxlength="10" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Service Required *</label>
+                    <select id="service" name="service" required>
+                        <option value="">Choose a service</option>
+                        <option>General Service</option>
+                        <option>Engine Repair</option>
+                        <option>Brake & Clutch Repair</option>
+                        <option>Electrical Repair</option>
+                        <option>Oil Change</option>
+                        <option>Bike Washing</option>
+                        <option>Spare Parts Replacement</option>
+                        <option>Emergency Bike Repair</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Preferred Date *</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Preferred Time *</label>
+                    <select id="time" name="time" required>
+                        <option value="">Choose a time</option>
+                        <option>09:00 AM - 11:00 AM</option>
+                        <option>11:00 AM - 01:00 PM</option>
+                        <option>01:00 PM - 03:00 PM</option>
+                        <option>03:00 PM - 05:00 PM</option>
+                        <option>05:00 PM - 07:00 PM</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="priority">Service Priority</label>
+                    <select id="priority" name="priority">
+                        <option>Standard Visit</option>
+                        <option>Urgent Visit</option>
+                        <option>Emergency Visit</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="bike">Motorcycle Model *</label>
+                    <input type="text" id="bike" name="bike"
+                        placeholder="Enter your bike model" required>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="address">Service Address *</label>
+                    <input type="text" id="address" name="address"
+                        placeholder="Enter your complete address" required>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="problem">Problem Description *</label>
+                    <textarea id="problem" name="problem" rows="4"
+                        placeholder="Describe your motorcycle issue and required repairs."
+                        required></textarea>
+                </div>
+
+            </div>
+
+            <label class="consent">
+                <input type="checkbox" id="consent" required>
+                <span>
+                    I understand that this is a service request and my
+                    appointment is not confirmed until the MotoCare team contacts me.
+                </span>
+            </label>
+
+            <button type="submit" class="submit-btn">
+                Submit Booking <span>↗</span>
+            </button>
+
+            <p id="message" role="status"></p>
+
+        </form>
+
+    </div>
+
+</section>
+
+<script>
+
+    // RTL Toggle
+
+    const rtlButton = document.getElementById("rtl-toggle");
+
+    rtlButton.addEventListener("click", function () {
+
+        document.body.classList.toggle("rtl");
+
+        document.documentElement.dir =
+            document.body.classList.contains("rtl") ? "rtl" : "ltr";
+
+    });
+
+
+    // Light and Dark Theme Toggle
+
+    const themeButton = document.getElementById("theme-toggle");
+
+    themeButton.addEventListener("click", function () {
+
+        document.body.classList.toggle("dark");
+
+        const icon = themeButton.querySelector("i");
+
+        if (document.body.classList.contains("dark")) {
+
+            icon.classList.replace("fa-moon", "fa-sun");
+
+        } else {
+
+            icon.classList.replace("fa-sun", "fa-moon");
+
+        }
+
+    });
+
+
+    // Prevent Past Date Selection
+
+    const dateInput = document.getElementById("date");
+
+    const today = new Date();
+
+    dateInput.min = new Date(
+        today.getTime() - today.getTimezoneOffset() * 60000
+    ).toISOString().split("T")[0];
+
+
+    // Booking Form Validation
+
+    document.getElementById("bookingForm").addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+            const message = document.getElementById("message");
+
+            message.textContent =
+                "Your booking form has been validated successfully. Please connect a booking service to receive and process requests.";
+
+            message.style.color = "#FF6B00";
+
+            this.reset();
+
+        }
+    );
+
+</script>
+
+</body>
+</html>

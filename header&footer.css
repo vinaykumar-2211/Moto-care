@@ -1,0 +1,830 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bg-color: #FFFFFF;
+    --text-color:  #334155;
+    --paragraph-color: #475569;
+    --primary-color: #0B1F33;
+    --secondary-color: #FF6B00;
+    --heading-font: "Cinzel", serif;
+    --body-font: "Lato", sans-serif;
+}
+
+body.dark {
+    --bg-color: black;
+    --text-color:  #E2E8F0;
+    --paragraph-color: #475569;
+    --primary-color: #FF6B00;
+    --secondary-color: #0B1F33;
+    --heading-font: "Cinzel", serif;
+  --body-font: "Lato", sans-serif;
+}
+html {
+    min-height: 100%;
+}
+body{
+    min-width: 100%;
+    background-color: var(--bg-color);
+}
+header {
+    width: 100%;
+    height: 95px;
+    background:var(--bg-color) ;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px gray;
+}
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+   max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 1%;
+    gap: 12px;
+}
+.brand{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+
+}
+.brand-logo img{
+    width: 80px;
+    height: 105px;
+    
+}
+.brand-title h1{
+    color: #FF6B00;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--heading-font);
+}
+.brand-title span{
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--heading-font);
+}
+.brand-title p{
+    color: var(--text-color);
+    margin-top: 8px;
+    font-family: var(--body-font);
+    font-size: 10px;
+    font-weight: 700;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex: 1;
+    gap: 25px;
+}
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: var(--body-font);
+    font-size: 0.80rem;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+.nav-links a:hover,
+.nav-links a.active {
+    color: #FF6B00;
+    text-decoration: underline;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    background: var(--bg-color);
+    padding: 8px 0;
+    list-style: none;
+    border-radius: 6px;
+    border: 2px solid var(--primary-color);
+    z-index: 1001;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    font-family: var(--heading-font);
+    color: var(--paragraph-color);
+}
+
+.dropdown-menu li a:hover {
+    background: var(--primary-color);
+    color: var(--paragraph-color);
+}
+
+.dropdown.active .dropdown-menu {
+    display: block;
+    color: #0B1F33;
+}
+
+.caret {
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.caret i {
+    color: var(--primary-color);
+}
+
+.dropdown.active .caret {
+    transform: rotate(180deg);
+}
+.toggles {
+   display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 8px;
+    flex-shrink: 0;
+}
+.Rtl-toggle,
+.theme-toggle,
+.menu-toogle {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    color: var(--primary-color);
+    border: 1.5px solid var(--secondary-color);
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.Rtl-toggle:hover,
+.theme-toggle:hover,
+.menu-toogle:hover {
+    background: var(--primary-color);
+    color: #FFFFFF;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+.primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: var(--primary-color);
+    color: #FFFFFF;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.primary-btn:hover {
+    background: #FFFFFF;
+    color: #FF6B00;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+.secondary-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    padding: 12px 24px;
+    background: #FFFFFF;
+    color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.secondary-btn:hover {
+    background: var(--bg-color);
+    color: #0B1F33;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+.menu-toogle {
+    display: none;
+}
+
+
+.footer{
+    width: 100%;
+    height: 350px;
+    background:var(--bg-color) ;
+    box-shadow: 0 3px 10px gray;
+}
+.footer-bar{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.2fr 1.3fr 1.5fr;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 1%;
+    gap: 35px;
+    margin-bottom: 10px;
+}
+.footer-container{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+}
+.footer-brand{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+
+}
+.footer-brand-logo img{
+    width: 80px;
+    height: 105px;
+    margin-left: -25px;
+    
+}
+.footer-brand-title h1{
+    color: #FF6B00;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--heading-font);
+}
+.footer-brand-title span{
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--heading-font);
+}
+.footer-brand-title p{
+    color: var(--text-color);
+    margin-top: 8px;
+    font-family: var(--body-font);
+    font-size: 10px;
+    font-weight: 700;
+}
+.brand-info{
+    color: var(--paragraph-color);
+    padding-left: 30px;
+    line-height: 1.8;
+    font-family: var();
+}
+.social-icons{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 12px;
+   
+}
+.social-icons i{
+    color: var(--primary-color);
+     border-radius: 50%;
+    border: 1px solid var(--secondary-color);
+    padding: 10px;
+}
+.social-icons i:hover{
+     background: var(--primary-color);
+    color: #FFFFFF;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+.social-icons a{
+    font-size: 20px;
+}
+.footer-bar hr{
+    margin: 5px;
+    width: 100%;
+
+}
+.footer-box1,
+.footer-box2,
+.footer-box3,
+.footer-box4{
+    padding-top: 35px;
+}
+.footer-box1 h3,
+.footer-box2 h3,
+.footer-box3 h3,
+.footer-box4 h3{
+    color: #FF6B00;
+    margin-bottom: 10px;
+    font-family: var(--heading-font);
+
+}
+.footer-box1 p,
+.footer-box2 p,
+.footer-box3 p,
+.footer-box4 p{
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-family: var(--body-font);
+    font-size: 0.80rem;
+
+}
+.footer-box1 p:hover,
+.footer-box2 p:hover,
+.footer-box3 p:hover,
+.footer-box4 p:hover{
+    color: var(--primary-color);
+}
+.footer-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+.footer-bottom p{
+    display: inline-flex;
+    gap: 10px;
+    text-align: center;
+    color: var(--text-color);
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.90rem;
+}
+
+
+/* ==========================================
+   MOT OCARE - COMPLETE RESPONSIVE CSS
+   Desktop: Above 1024px
+   Tablet: 601px - 1024px
+   Mobile: 320px - 600px
+========================================== */
+
+
+/* ==========================================
+   1. DESKTOP VIEW - ABOVE 1024px
+========================================== */
+
+@media (min-width: 1025px) {
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-toogle {
+        display: none;
+    }
+
+    .mobile-dropdown .dropdown-menu {
+        display: none;
+    }
+
+    .footer-bar {
+        grid-template-columns: 2fr 1fr 1.2fr 1.3fr 1.5fr;
+    }
+}
+
+
+/* ==========================================
+   2. TABLET VIEW - 768px TO 1024px
+========================================== */
+
+@media (max-width: 1024px) {
+
+    /* HEADER */
+
+    .header {
+        height: 85px;
+    }
+
+    .nav-bar {
+        width: 95%;
+        height: 100%;
+        position: relative;
+        gap: 10px;
+    }
+
+    .brand-logo img {
+        width: 65px;
+        height: 85px;
+    }
+
+    .brand-title h1,
+    .brand-title span {
+        font-size: 15px;
+    }
+
+    .brand-title p {
+        font-size: 8px;
+    }
+
+    /* Hide normal navigation */
+
+    .nav-links {
+        display: none;
+    }
+
+    /* Show hamburger */
+
+    .menu-toogle {
+        display: inline-flex;
+    }
+
+    .toggles {
+        gap: 7px;
+    }
+
+    .Rtl-toggle,
+    .theme-toggle,
+    .menu-toogle {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    /* MOBILE DROPDOWN */
+
+    .mobile-dropdown {
+        position: relative;
+    }
+
+    .mobile-dropdown .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: calc(100% + 15px);
+        right: 0;
+        left: auto;
+        width: 200px;
+        background: var(--bg-color);
+        border: 1px solid var(--primary-color);
+        border-radius: 8px;
+        padding: 8px 0;
+        z-index: 2000;
+    }
+
+    .mobile-dropdown.active .dropdown-menu {
+        display: block;
+    }
+
+    .mobile-dropdown .dropdown-menu li {
+        list-style: none;
+    }
+
+    .mobile-dropdown .dropdown-menu li a {
+        display: block;
+        padding: 12px 15px;
+        color: var(--text-color);
+        text-decoration: none;
+    }
+
+    .mobile-dropdown .dropdown-menu li a:hover {
+        background: var(--primary-color);
+        color: #FFFFFF;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        height: auto;
+        padding: 30px 0 20px;
+    }
+
+    .footer-bar {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: 92%;
+        gap: 25px;
+    }
+
+    .footer-container {
+        align-items: flex-start;
+    }
+
+    .footer-brand-logo img {
+        width: 65px;
+        height: 85px;
+        margin-left: 0;
+    }
+
+    .brand-info {
+        padding-left: 0;
+    }
+
+    .footer-box1,
+    .footer-box2,
+    .footer-box3,
+    .footer-box4 {
+        padding-top: 15px;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+}
+
+
+/* ==========================================
+   3. MOBILE VIEW - 481px TO 767px
+========================================== */
+
+@media (max-width: 767px) {
+
+    /* HEADER */
+
+    .header {
+        height: 75px;
+    }
+
+    .nav-bar {
+        width: 96%;
+    }
+
+    .brand-logo img {
+        width: 50px;
+        height: 70px;
+    }
+
+    .brand-title h1,
+    .brand-title span {
+        font-size: 13px;
+    }
+
+    .brand-title p {
+        font-size: 7px;
+        margin-top: 5px;
+    }
+
+    .toggles {
+        gap: 5px;
+    }
+
+    .Rtl-toggle,
+    .theme-toggle,
+    .menu-toogle {
+        width: 33px;
+        height: 33px;
+        font-size: 13px;
+    }
+
+    .primary-btn {
+        padding: 9px 12px;
+        font-size: 11px;
+    }
+
+    .mobile-dropdown .dropdown-menu {
+        width: 190px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 25px 0 15px;
+    }
+
+    .footer-bar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 90%;
+        gap: 20px 15px;
+    }
+
+    .footer-container {
+        grid-column: 1 / -1;
+    }
+
+    .footer-brand-logo img {
+        width: 60px;
+        height: 75px;
+    }
+
+    .footer-brand-title h1,
+    .footer-brand-title span {
+        font-size: 15px;
+    }
+
+    .footer-brand-title p {
+        font-size: 8px;
+    }
+
+    .brand-info {
+        padding-left: 0;
+        font-size: 13px;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .social-icons i {
+        padding: 8px;
+    }
+
+    .footer-box1,
+    .footer-box2,
+    .footer-box3,
+    .footer-box4 {
+        padding-top: 10px;
+    }
+
+    .footer-box1 h3,
+    .footer-box2 h3,
+    .footer-box3 h3,
+    .footer-box4 h3 {
+        font-size: 15px;
+    }
+
+    .footer-box1 p,
+    .footer-box2 p,
+    .footer-box3 p,
+    .footer-box4 p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .footer-bottom p {
+        font-size: 11px;
+        padding: 0 10px;
+    }
+
+}
+
+
+/* ==========================================
+   4. SMALL MOBILE VIEW - 320px TO 480px
+========================================== */
+
+@media (max-width: 480px) {
+
+    /* HEADER */
+
+    .header {
+        height: 70px;
+    }
+
+    .nav-bar {
+        width: 96%;
+        gap: 4px;
+    }
+
+    .brand-logo img {
+        width: 42px;
+        height: 60px;
+    }
+
+    .brand-title h1,
+    .brand-title span {
+        font-size: 11px;
+    }
+
+    .brand-title p {
+        font-size: 6px;
+        margin-top: 4px;
+    }
+
+    .toggles {
+        gap: 3px;
+    }
+
+    .Rtl-toggle,
+    .theme-toggle,
+    .menu-toogle {
+        width: 29px;
+        height: 29px;
+        font-size: 11px;
+        border-radius: 6px;
+    }
+
+    .primary-btn {
+        padding: 8px 9px;
+        font-size: 10px;
+        border-radius: 6px;
+    }
+
+    .mobile-dropdown .dropdown-menu {
+        width: 175px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-bar {
+        grid-template-columns: 1fr;
+        width: 90%;
+        gap: 15px;
+    }
+
+    .footer-container {
+        grid-column: auto;
+    }
+
+    .footer-brand-logo img {
+        width: 55px;
+        height: 70px;
+    }
+
+    .footer-box1,
+    .footer-box2,
+    .footer-box3,
+    .footer-box4 {
+        padding-top: 8px;
+    }
+
+    .footer-box1 h3,
+    .footer-box2 h3,
+    .footer-box3 h3,
+    .footer-box4 h3 {
+        font-size: 16px;
+    }
+
+    .footer-box1 p,
+    .footer-box2 p,
+    .footer-box3 p,
+    .footer-box4 p {
+        font-size: 13px;
+    }
+
+    .footer-bottom p {
+        font-size: 10px;
+    }
+
+}
+
+
+/* ==========================================
+   5. VERY SMALL SCREENS
+========================================== */
+
+@media (max-width: 360px) {
+
+    .brand-logo img {
+        width: 38px;
+        height: 55px;
+    }
+
+    .brand-title h1,
+    .brand-title span {
+        font-size: 10px;
+    }
+
+    .brand-title p {
+        font-size: 5px;
+    }
+
+    .Rtl-toggle,
+    .theme-toggle,
+    .menu-toogle {
+        width: 27px;
+        height: 27px;
+    }
+
+    .primary-btn {
+        padding: 7px;
+        font-size: 9px;
+    }
+
+}
+
+
+/* ==========================================
+   6. GENERAL MOBILE FIX
+========================================== */
+
+@media (max-width: 1024px) {
+
+    body {
+        min-width: 320px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .footer-bar > * {
+        min-width: 0;
+    }
+
+    .footer-box1 p,
+    .footer-box2 p,
+    .footer-box3 p,
+    .footer-box4 p {
+        overflow-wrap: anywhere;
+    }
+
+}

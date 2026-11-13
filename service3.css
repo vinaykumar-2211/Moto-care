@@ -1,0 +1,980 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bg-color: #FFFFFF;
+    --text-color:  #334155;
+    --paragraph-color: #475569;
+    --primary-color: #0B1F33;
+    --secondary-color: #FF6B00;
+    --heading-font: "Cinzel", serif;
+    --body-font: "Lato", sans-serif;
+}
+
+body.dark {
+    --bg-color: black;
+    --text-color:  #E2E8F0;
+    --paragraph-color: #475569;
+    --primary-color: #FF6B00;
+    --secondary-color: #0B1F33;
+    --heading-font: "Cinzel", serif;
+  --body-font: "Lato", sans-serif;
+}
+html {
+    min-height: 100%;
+}
+body{
+    min-width: 100%;
+    background-color: var(--bg-color);
+}
+.service-hero {
+    width: 100%;
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.brake-hero {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(11, 31, 51, 0.95),
+            rgba(11, 31, 51, 0.65),
+            rgba(11, 31, 51, 0.2)
+        ),
+        url("images/brake2.jpg");
+}
+
+.service-hero-content {
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+.service-hero-content h6{
+     display: inline-block;
+    color: #FF6B00;
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.service-hero-content h2 {
+    font-family: var(--heading-font);
+    font-size: 3.5rem;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+.service-hero-content h2 span{
+    color: #FF6B00;
+}
+
+.service-hero-content p {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #E2E8F0;
+    margin-bottom: 28px;
+}
+.brake-details {
+    width: 100%;
+    padding: 70px 8%;
+}
+
+.brake-details .service-details-container {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.brake-details .service-details-image {
+    width: 100%;
+    height: 390px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.brake-details .service-details-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.brake-details .service-details-image img:hover {
+    transform: scale(1.05);
+}
+
+.brake-details .service-details-content {
+    width: 100%;
+}
+
+.brake-details .service-details-content h6 {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #FF6B00;
+    margin-bottom: 18px;
+}
+
+.brake-details .service-details-content h2 {
+    font-family: var(--heading-font);
+    font-size: 3.5rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+.brake-details .service-details-content h2 span{
+    color: #FF6B00;
+}
+.brake-details .service-details-content p {
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: #475569;
+    margin-bottom: 16px;
+}
+
+.brake-details .service-details-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 22px;
+}
+
+.brake-details .service-details-content ul li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    color: #334155;
+    margin-bottom: 14px;
+}
+
+.brake-details .service-details-content ul li i {
+    color: #FF6B00;
+    font-size: 16px;
+}
+
+.why-choose-section {
+    width: 100%;
+    padding: 80px 8%;
+    background: var(--primary-color);
+}
+
+.why-choose-container {
+    max-width: 1250px;
+    margin: auto;
+}
+
+.why-choose-heading {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.why-choose-heading h6 {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.why-choose-heading h2 {
+    font-family: var(--heading-font);
+    font-size: 3.5rem;
+    text-align: center;
+    color: #FFFFFF;
+     margin-bottom: 15px;
+}
+.why-choose-heading h2 span{
+    font-family: var(--heading-font);
+    font-size: 3.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+.why-choose-heading p {
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    color: #FFFFFF;
+    line-height: 1.8;
+}
+
+.why-choose-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.why-choose-card {
+    padding: 30px 20px;
+    text-align: center;
+    border: 1px solid rgba(11, 31, 51, 0.3);
+    border-radius: 9px;
+    background: #FFFFFF;
+    transition: all 0.4s ease;
+}
+
+.why-choose-card:hover {
+    transform: translateY(-8px);
+    border-color: #FF6B00;
+    box-shadow: 0 10px 25px rgba(11, 31, 51, 0.10);
+}
+
+.why-choose-icon {
+    font-size: 28px;
+    color: #FF6B00;
+    margin-bottom: 18px;
+}
+
+.why-choose-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #0B1F33;
+    margin-bottom: 12px;
+}
+
+.why-choose-card p {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #475569;
+}
+.process-section {
+    width: 100%;
+    padding: 85px 8%;
+}
+
+.process-container {
+    max-width: 1250px;
+    margin: auto;
+}
+
+.process-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.process-heading h6 {
+     display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #FF6B00;
+    margin-bottom: 18px;
+}
+
+.process-heading h2 {
+    font-family: var(--heading-font);
+    font-size: 3.5rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+.process-heading h2 span{
+    color: #FF6B00;
+}
+.process-heading p {
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    color: #475569;
+    line-height: 1.8;
+}
+
+.process-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.process-card {
+    padding: 25px 20px;
+    min-height: 175px;
+    border: 1px solid rgba(11, 31, 51, 0.3);
+    border-bottom: 3px solid #FF6B00;
+    border-radius: 9px;
+    background: #FFFFFF;
+    transition: all 0.4s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-7px);
+    border-color: #FF6B00;
+    box-shadow: 0 10px 25px rgba(11, 31, 51, 0.10);
+}
+
+.process-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 27px;
+    font-weight: 700;
+    color: #FF6B00;
+    margin-bottom: 12px;
+}
+
+.process-card h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #0B1F33;
+    margin-bottom: 12px;
+}
+
+.process-card p {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #475569;
+}
+.faq-section {
+    width: 100%;
+    padding: 80px 8%;
+    background: #E2E8F0;
+}
+
+.faq-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.faq-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.faq-heading h6 {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--secondary-color);
+    margin-bottom: 18px;
+}
+
+.faq-heading h2 {
+     font-family: var(--heading-font);
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+.faq-heading h2 span{
+    color: var(--secondary-color);
+}
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    border: 1px solid rgba(11, 31, 51, 0.25);
+    border-radius: 8px;
+    background: #FFFFFF;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: #FF6B00;
+}
+
+.faq-item summary {
+    position: relative;
+    padding: 20px 25px;
+    padding-right: 50px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0B1F33;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::before {
+    content: '+';
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 23px;
+    font-weight: 400;
+    color: #FF6B00;
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::before {
+    content: '−';
+}
+
+.faq-item[open] {
+    border-color: #FF6B00;
+}
+
+.faq-item p {
+    padding: 0 25px 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #475569;
+}
+.motocare-cta {
+    width: 100%;
+    max-width: 1050px;
+    min-height: 280px;
+    margin: 70px auto;
+    padding: 55px 6%;
+    border-radius: 12px;
+    background:
+        linear-gradient(90deg, rgba(11, 31, 51, 0.96), rgba(11, 31, 51, 0.78)),
+        url('images/tips2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.motocare-cta-content {
+    max-width: 750px;
+}
+
+.motocare-cta-content span {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #FF6B00;
+    margin-bottom: 15px;
+}
+
+.motocare-cta-content h2 {
+    font-family: var(--heading-font);
+    font-size: 3.5rem;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.motocare-cta-content p {
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #E2E8F0;
+    margin-bottom: 25px;
+}
+
+
+@media (max-width: 1024px) {
+
+    .service-hero {
+        min-height: 370px;
+        padding: 60px 6%;
+        background-position: center;
+    }
+
+    .service-hero-content {
+        max-width: 550px;
+    }
+
+    .service-hero-content h1 {
+        font-size: 38px;
+    }
+
+    .service-hero-content p {
+        font-size: 15px;
+    }
+
+    .brake-details {
+        padding: 60px 5%;
+    }
+
+    .brake-details .service-details-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px;
+    }
+
+    .brake-details .service-details-image {
+        height: 330px;
+    }
+
+    .brake-details .service-details-content h2 {
+        font-size: 29px;
+    }
+
+    .brake-details .service-details-content p {
+        font-size: 14px;
+    }
+
+    .why-choose-section,
+    .process-section,
+    .faq-section {
+        padding: 65px 5%;
+    }
+
+    .why-choose-heading h2,
+    .process-heading h2,
+    .faq-heading h2 {
+        font-size: 32px;
+    }
+
+    .why-choose-cards,
+    .process-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .motocare-cta {
+        width: 90%;
+        min-height: 260px;
+        margin: 60px auto;
+        padding: 45px 5%;
+    }
+
+    .motocare-cta-content h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .service-hero {
+        min-height: 330px;
+        padding: 50px 6%;
+        background-position: center;
+    }
+
+    .service-hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .service-hero-content h1 {
+        font-size: 32px;
+        line-height: 1.4;
+    }
+
+    .service-hero-content p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .brake-details {
+        padding: 55px 5%;
+    }
+
+    .brake-details .service-details-container {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .brake-details .service-details-image {
+        width: 100%;
+        height: 330px;
+    }
+
+    .brake-details .service-details-content {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .brake-details .service-details-content h2 {
+        font-size: 28px;
+    }
+
+    .brake-details .service-details-content p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .brake-details .service-details-content ul li {
+        font-size: 14px;
+    }
+
+    .why-choose-section,
+    .process-section,
+    .faq-section {
+        padding: 55px 5%;
+    }
+
+    .why-choose-heading,
+    .process-heading,
+    .faq-heading {
+        margin-bottom: 35px;
+    }
+
+    .why-choose-heading h2,
+    .process-heading h2,
+    .faq-heading h2 {
+        font-size: 28px;
+    }
+
+    .why-choose-cards,
+    .process-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .why-choose-card {
+        padding: 25px 15px;
+    }
+
+    .why-choose-card h3,
+    .process-card h4 {
+        font-size: 16px;
+    }
+
+    .why-choose-card p,
+    .process-card p {
+        font-size: 13px;
+    }
+
+    .process-card {
+        min-height: 160px;
+        padding: 22px 17px;
+    }
+
+    .process-card h3 {
+        font-size: 24px;
+    }
+
+    .faq-item summary {
+        padding: 17px 20px;
+        padding-right: 45px;
+        font-size: 15px;
+    }
+
+    .faq-item summary::before {
+        right: 17px;
+    }
+
+    .faq-item p {
+        padding: 0 20px 17px;
+        font-size: 13px;
+    }
+
+    .motocare-cta {
+        width: 90%;
+        min-height: 250px;
+        margin: 50px auto;
+        padding: 40px 5%;
+        background-position: center;
+    }
+
+    .motocare-cta-content {
+        width: 100%;
+    }
+
+    .motocare-cta-content h2 {
+        font-size: 27px;
+    }
+
+    .motocare-cta-content p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .service-hero {
+        width: 100%;
+        min-height: 300px;
+        padding: 40px 6%;
+        background-position: center;
+    }
+
+    .service-hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .service-hero-content .section-tag {
+        font-size: 10px;
+        margin-bottom: 13px;
+    }
+
+    .service-hero-content h1 {
+        font-size: 25px;
+        line-height: 1.4;
+        margin-bottom: 14px;
+        overflow-wrap: break-word;
+    }
+
+    .service-hero-content p {
+        font-size: 13px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+
+    .brake-details {
+        width: 100%;
+        padding: 45px 5%;
+    }
+
+    .brake-details .service-details-container {
+        width: 100%;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 25px;
+        margin: auto;
+        align-items: start;
+    }
+
+    .brake-details .service-details-image {
+        width: 100%;
+        height: 240px;
+        min-width: 0;
+        overflow: hidden;
+        border-radius: 9px;
+    }
+
+    .brake-details .service-details-image img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+    .brake-details .service-details-content {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .brake-details .section-tag {
+        font-size: 10px;
+        margin-bottom: 13px;
+    }
+
+    .brake-details .service-details-content h2 {
+        font-size: 23px;
+        line-height: 1.4;
+        margin-bottom: 14px;
+    }
+
+    .brake-details .service-details-content p {
+        font-size: 13px;
+        line-height: 1.8;
+        margin-bottom: 13px;
+    }
+
+    .brake-details .service-details-content ul {
+        margin-top: 18px;
+    }
+
+    .brake-details .service-details-content ul li {
+        font-size: 13px;
+        gap: 9px;
+        margin-bottom: 12px;
+    }
+
+    .why-choose-section,
+    .process-section,
+    .faq-section {
+        padding: 45px 5%;
+    }
+
+    .why-choose-heading,
+    .process-heading,
+    .faq-heading {
+        margin-bottom: 28px;
+    }
+
+    .why-choose-heading span,
+    .process-heading span,
+    .faq-heading span {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    .why-choose-heading h2,
+    .process-heading h2,
+    .faq-heading h2 {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+
+    .why-choose-heading p,
+    .process-heading p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .why-choose-cards,
+    .process-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .why-choose-card {
+        padding: 24px 18px;
+    }
+
+    .why-choose-icon {
+        font-size: 25px;
+        margin-bottom: 13px;
+    }
+
+    .why-choose-card h3 {
+        font-size: 16px;
+    }
+
+    .why-choose-card p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .process-card {
+        min-height: auto;
+        padding: 22px 18px;
+    }
+
+    .process-card h3 {
+        font-size: 23px;
+    }
+
+    .process-card h4 {
+        font-size: 16px;
+    }
+
+    .process-card p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .faq-heading h2 {
+        font-size: 22px;
+    }
+
+    .faq-list {
+        gap: 12px;
+    }
+
+    .faq-item summary {
+        padding: 15px;
+        padding-right: 40px;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .faq-item summary::before {
+        right: 13px;
+        font-size: 21px;
+    }
+
+    .faq-item p {
+        padding: 0 15px 15px;
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .motocare-cta {
+        width: 90%;
+        min-height: 230px;
+        margin: 40px auto;
+        padding: 30px 6%;
+        border-radius: 9px;
+        background-position: center;
+    }
+
+    .motocare-cta-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .motocare-cta-content span {
+        font-size: 10px;
+        margin-bottom: 12px;
+    }
+
+    .motocare-cta-content h2 {
+        font-size: 21px;
+        line-height: 1.4;
+        margin-bottom: 12px;
+    }
+
+    .motocare-cta-content p {
+        font-size: 13px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .service-hero {
+        min-height: 280px;
+        padding: 35px 5%;
+    }
+
+    .service-hero-content h1 {
+        font-size: 23px;
+    }
+
+    .service-hero-content p {
+        font-size: 12px;
+    }
+
+    .brake-details {
+        padding: 40px 5%;
+    }
+
+    .brake-details .service-details-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .brake-details .service-details-image {
+        width: 100%;
+        height: 210px;
+    }
+
+    .brake-details .service-details-content h2 {
+        font-size: 21px;
+    }
+
+    .brake-details .service-details-content p {
+        font-size: 12px;
+    }
+
+    .brake-details .service-details-content ul li {
+        font-size: 12px;
+    }
+
+    .why-choose-heading h2,
+    .process-heading h2,
+    .faq-heading h2 {
+        font-size: 20px;
+    }
+
+    .motocare-cta {
+        width: 92%;
+        padding: 25px 5%;
+    }
+
+    .motocare-cta-content h2 {
+        font-size: 19px;
+    }
+}
