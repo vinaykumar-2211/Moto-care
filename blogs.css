@@ -63,7 +63,7 @@ body{
     color: #FF6B00;
 }
 .tips-description {
-    color: var(--paragraph-color);
+    color: var(--text-color);
     font-family: var(--body-font);
     line-height: 1.9;
     margin-bottom: 15px;
@@ -105,7 +105,7 @@ body{
 .tips-feature span {
     font-family: 'Lato', sans-serif;
     font-size: 13px;
-    color: #475569;
+    color: var(--text-color);
 }
 
 
@@ -126,8 +126,8 @@ body{
 
 .tips-image-card {
     position: absolute;
-    bottom: -25px;
-    left: -35px;
+    bottom: -45px;
+    left: -45px;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -164,7 +164,6 @@ body{
 .blog-categories {
     width: 100%;
     padding: 85px 8%;
-    background-color: #E2E8F0;
 }
 
 .blog-heading {
@@ -185,14 +184,14 @@ body{
 .blog-heading h2 {
    font-family: var(--heading-font);
     font-size: 3.5rem;
-    color: #0B1F33;
+    color: var(--text-color);
     margin-bottom: 15px;
 }
 .blog-heading h2 span{
     color: #FF6B00;
 }
 .blog-heading p {
-  color: var(--paragraph-color);
+  color: var(--text-color);
     font-family: var(--body-font);
     line-height: 1.9;
 }
@@ -325,7 +324,7 @@ body{
     color: #FF6B00;
 }
 .blog-header p {
-  color: var(--paragraph-color);
+  color: var(--text-color);
     font-family: var(--body-font);
     line-height: 1.9;
 }
@@ -378,7 +377,7 @@ body{
     font-weight: 600;
 }
 
-.blog-content {
+.blog-content1 {
     padding: 25px;
 }
 
@@ -386,12 +385,12 @@ body{
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    color: #64748B;
+    color: #FF6B00;
     font-size: 12px;
     margin-bottom: 18px;
 }
 
-.blog-content h3 {
+.blog-content1 h3 {
     color: #0B1F33;
     font-family: "Cinzel", serif;
     font-size: 19px;
@@ -399,14 +398,14 @@ body{
     margin-bottom: 15px;
 }
 
-.blog-content p {
+.blog-content1 p {
     color: #475569;
     font-size: 14px;
     line-height: 1.8;
     margin-bottom: 20px;
 }
 
-.blog-content a {
+.blog-content1 a {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -417,7 +416,7 @@ body{
     transition: 0.3s ease;
 }
 
-.blog-content a:hover {
+.blog-content1 a:hover {
     color: #0B1F33;
     gap: 16px;
 }
@@ -465,7 +464,7 @@ body{
     color: #FF6B00;
 }
 .maintenance-intro {
-      color: var(--paragraph-color);
+      color: var(--text-color);
     font-family: var(--body-font);
     line-height: 1.9;
     margin-bottom: 25px;
@@ -490,21 +489,21 @@ body{
     align-items: center;
     justify-content: center;
     background: #F1F5F9;
-    color: #FF6B00;
+    color: var(--primary-color);
     border-radius: 50%;
     font-size: 15px;
     font-weight: 700;
 }
 
 .maintenance-item h4 {
-    color: #0B1F33;
+    color:#FF6B00;
     font-family: var(--heading-font);
     font-size: 16px;
     margin-bottom: 6px;
 }
 
 .maintenance-item p {
-    color: #475569;
+    color: var(--text-color);
     font-size: 13px;
     line-height: 1.8;
     margin-bottom: 15px;
@@ -592,14 +591,14 @@ body{
 }
 
 .bottom-tip h3 {
-    color: #0B1F33;
+    color: var(--primary-color);
     font-family: "Cinzel", serif;
     font-size: 21px;
     margin: 12px 0;
 }
 
 .bottom-tip p {
-    color: #475569;
+    color: var(--text-color);
     font-size: 14px;
     line-height: 1.8;
 }
@@ -631,7 +630,7 @@ body{
     color: #FF6B00;
 }
 .blog-intro p {
-      color: var(--paragraph-color);
+      color: var(--text-color);
     font-family: var(--body-font);
     line-height: 1.9;
 }
@@ -643,7 +642,6 @@ body{
     align-items: center;
     gap: 60px;
     padding: 10px 8%;
-    border-bottom: 1px solid #DCE1E7;
 }
 
 
@@ -668,22 +666,8 @@ body{
 .feature-content {
     width: 100%;
 }
-.feature-content h6{
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    color: #FF6B00;
-    margin-bottom: 18px;
-}
-.feature-content h2 {
-   font-family: var(--heading-font);
-    font-size: 3.5rem;
-    color: var(--text-color);
-    margin-bottom: 15px;
-}
 .feature-content p {
-     color: var(--paragraph-color);
+     color: var(--text-color);
     font-family: var(--body-font);
     line-height: 1.9;
 
@@ -698,6 +682,7 @@ body{
     font-size: 15px;
     font-weight: 700;
     transition: 0.3s ease;
+    text-decoration: none;
 }
 
 .feature-link:hover {
@@ -711,7 +696,7 @@ body{
     align-items: center;
     gap: 60px;
     padding: 65px 8%;
-    border-bottom: 1px solid #DCE1E7;
+    
 }
 
 .blog-row.reverse .blog-image {
@@ -744,27 +729,11 @@ body{
     width: 100%;
 }
 
-.blog-content h6 {
-     display: inline-block;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    color: #FF6B00;
-    margin-bottom: 18px;
-}
-
-.blog-content h2 {
-    font-family: var(--heading-font);
-    font-size: 3.5rem;
-    color: var(--text-color);
-    margin-bottom: 15px;
-}
-
 .blog-content p {
-    color: var(--paragraph-color);
+     color: var(--text-color);
     font-family: var(--body-font);
     line-height: 1.9;
-
+    margin-bottom: 15px;
 }
 
 .blog-link {
@@ -775,6 +744,7 @@ body{
     font-size: 15px;
     font-weight: 700;
     transition: 0.3s ease;
+    text-decoration: none;
 }
 
 .blog-link:hover {
@@ -788,7 +758,6 @@ body{
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 60px;
-    border-bottom: 1px solid #DCE1E7;
 }
 
 .blog-image {
@@ -813,24 +782,8 @@ body{
     width: 100%;
 }
 
-.blog-content h6 {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    color: #FF6B00;
-    margin-bottom: 18px;
-}
-
-.blog-content h2 {
-    font-family: var(--heading-font);
-    font-size: 3.5rem;
-    color: var(--text-color);
-    margin-bottom: 15px;
-}
-
 .blog-content p {
-      color: var(--paragraph-color);
+    color: var(--text-color);
     font-family: var(--body-font);
     line-height: 1.9;
 }
@@ -856,34 +809,19 @@ body{
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 60px;
-    border-bottom: 1px solid #DCE1E7;
+   
 }
 
 .moto-blog-content {
     width: 100%;
 }
 
-.moto-blog-content h6 {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    color: #FF6B00;
-    margin-bottom: 18px;
-}
-
-.moto-blog-content h2 {
-   font-family: var(--heading-font);
-    font-size: 3.5rem;
-    color: var(--text-color);
-    margin-bottom: 15px;
-}
-
 .moto-blog-content p {
-       color: var(--paragraph-color);
+     color: var(--text-color);
     font-family: var(--body-font);
     line-height: 1.9;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+
 }
 
 .moto-blog-link {
@@ -894,6 +832,7 @@ body{
     font-size: 15px;
     font-weight: 700;
     transition: 0.3s ease;
+    text-decoration: none;
 }
 
 .moto-blog-link:hover {

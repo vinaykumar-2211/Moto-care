@@ -219,8 +219,8 @@ header {
     transition: all 0.3s ease;
 }
 .secondary-btn:hover {
-    background: var(--bg-color);
-    color: #0B1F33;
+    background: var(--primary-color);
+    color: #FFFFFF;
     border-color: var(--primary-color);
     transform: translateY(-2px);
 }
@@ -284,7 +284,7 @@ header {
     font-weight: 700;
 }
 .brand-info{
-    color: var(--paragraph-color);
+    color: var(--text-color);
     padding-left: 30px;
     line-height: 1.8;
     font-family: var();

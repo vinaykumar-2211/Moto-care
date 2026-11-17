@@ -130,7 +130,6 @@ body{
 .contact-section {
     width: 100%;
     padding: 90px 8%;
-    background-color: var(--primary-color);
 }
 
 .contact-heading {
@@ -139,7 +138,7 @@ body{
     margin: 0 auto 55px;
 }
 
-.contact-heading span {
+.contact-heading h6 {
     display: inline-block;
     font-size: 12px;
     font-weight: 700;
@@ -151,13 +150,18 @@ body{
 .contact-heading h2 {
     font-family: var(--heading-font);
     font-size: 3.5rem;
-    color: var(--secondary-color);
+    color: var(--text-color);
     margin-bottom: 15px;
 }
-
+.contact-heading h2 span {
+    font-family: var(--heading-font);
+    font-size: 3.5rem;
+    color: #FF6B00;
+    margin-bottom: 15px;
+}
 .contact-heading p {
     font-family: 'Lato', sans-serif;
-    color: #475569;
+    color: var(--text-color);
     font-size: 16px;
     line-height: 1.8;
 }
@@ -189,7 +193,7 @@ body{
     width: 65px;
     height: 65px;
     background: rgba(255, 107, 0, 0.10);
-    color: #0B1F33;
+    color: var(--primary-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -200,7 +204,7 @@ body{
 }
 
 .contact-card:hover .contact-icon {
-    background: #0B1F33;
+    background: var(--primary-color);
     color: #FFFFFF;
 }
 
@@ -270,16 +274,21 @@ body{
     color: var(--text-color);
     margin-bottom: 15px;
 }
-
+.contact-form-left h2 span{
+    font-family: var(--heading-font);
+    font-size: 3.5rem;
+    color: #FF6B00;
+    margin-bottom: 15px;
+}
 .contact-intro {
     font-family: 'Lato', sans-serif;
-    color: #475569;
+    color: var(--text-color);
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 30px;
 }
 
-/* FORM */
+
 
 .contact-form {
     width: 100%;
@@ -459,7 +468,7 @@ body{
 .location-section {
     width: 100%;
     padding: 90px 8%;
-    background-color: #E2E8F0;
+
 }
 
 .location-container {
@@ -470,8 +479,6 @@ body{
     gap: 55px;
     align-items: center;
 }
-
-/* LEFT CONTENT */
 
 .location-tagline {
     display: inline-block;
@@ -485,13 +492,18 @@ body{
 .location-content h2 {
      font-family: var(--heading-font);
     font-size: 3.5rem;
-    color: #0B1F33;
+    color: var(--text-color);
     margin-bottom: 15px;
 }
-
+.location-content h2 span{
+     font-family: var(--heading-font);
+    font-size: 3.5rem;
+    color: #FF6B00;
+    margin-bottom: 15px;
+}
 .location-intro {
     font-family: 'Lato', sans-serif;
-    color: #475569;
+    color: var(--text-color);
     font-size: 15px;
     line-height: 1.8;
     margin-bottom: 30px;
@@ -518,7 +530,7 @@ body{
     justify-content: center;
     align-items: center;
     background: rgba(255, 107, 0, 0.10);
-    color: #0B1F33;
+    color: var(--primary-color);
     border-radius: 50%;
     font-size: 17px;
     transition: 0.3s ease;
@@ -531,14 +543,14 @@ body{
 
 .location-item h4 {
     font-family: 'Cinzel', serif;
-    color: #0B1F33;
+    color: #FF6B00;
     font-size: 16px;
     margin-bottom: 6px;
 }
 
 .location-item p {
     font-family: 'Lato', sans-serif;
-    color: #475569;
+    color: var(--text-color);
     font-size: 14px;
     line-height: 1.6;
 }
@@ -546,7 +558,7 @@ body{
 .location-item small {
     display: block;
     font-family: 'Lato', sans-serif;
-    color: #475569;
+    color: var(--text-color);
     margin-top: 5px;
 }
 
@@ -604,10 +616,17 @@ body{
     line-height: 1.35;
     margin-bottom: 20px;
 }
+.faq-left h2 span {
+    font-family: var(--heading-font);
+    color: #FF6B00;
+    font-size: clamp(30px, 3vw, 43px);
+    line-height: 1.35;
+    margin-bottom: 20px;
+}
 
 .faq-description {
     font-family: var(--body-font);
-    color: var(--paragraph-color);
+    color: var(--text-color);
     font-size: 15px;
     line-height: 1.9;
     margin-bottom: 35px;
@@ -644,7 +663,7 @@ body{
 
 .faq-contact-content p {
     font-family: var(--body-font);
-    color: var(--paragraph-color);
+    color: var(--text-color);
     font-size: 13px;
     margin-bottom: 13px;
 }
@@ -733,7 +752,7 @@ body{
 .faq-answer p {
     overflow: hidden;
     padding: 0 24px;
-    color: var(--paragraph-color);
+    color: var(--text-color);
     font-family: var(--body-font);
     font-size: 14px;
     line-height: 1.8;

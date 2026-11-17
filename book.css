@@ -97,33 +97,47 @@ body.dark .booking-container {
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
 }
 
-.brand {
+.booking-container .brand {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
-    gap: 8px;
+    justify-content: center;
+    width: 100%;
     margin: 0 auto 30px;
+    text-align: center;
 }
 
-.brand-icon img {
+.booking-container .brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.booking-container .brand-logo img {
     width: 100px;
-    height: 105px;
+    height: 110px;
     object-fit: contain;
 }
 
-.brand h3 {
-    color: #FF6B00;
-    font-family: var(--heading-font);
-    font-size: 27px;
-    font-weight: 800;
+.booking-container .brand-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
-.brand h3 span{
-    color: var(--text-color);
+
+.booking-container .brand-title h1 {
+    margin: 0;
+    text-align: left;
+    font-size: 2rem;
 }
-.brand p {
+
+.booking-container .brand-title span {
+    font-size: 2rem;
+}
+
+.booking-container .brand-title p {
     margin-top: 8px;
-    color: var(--paragraph-color);
+    text-align: left;
     font-size: 13px;
 }
 
@@ -148,7 +162,7 @@ body.dark .booking-container {
     max-width: 590px;
     margin: 0 auto 28px;
     text-align: center;
-    color: var(--paragraph-color);
+    color: var(--text-color);
     font-size: 14px;
     line-height: 1.8;
 }
@@ -289,7 +303,16 @@ body.rtl .notice {
     font-size: 13px;
     line-height: 1.6;
 }
+.form-group input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(48%) sepia(95%) saturate(2000%)
+            hue-rotate(1deg) brightness(100%) contrast(105%);
+    cursor: pointer;
+}
 
+/* Firefox */
+.form-group input[type="date"] {
+    accent-color: var(--text-color);
+}
 @media (max-width: 640px) {
     .booking-top-controls {
         padding: 12px 15px;

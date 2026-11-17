@@ -6,7 +6,6 @@
 :root {
     --bg-color: #FFFFFF;
     --text-color:  #334155;
-    --paragraph-color: #475569;
     --primary-color: #0B1F33;
     --secondary-color: #FF6B00;
     --heading-font: "Cinzel", serif;
@@ -14,9 +13,8 @@
 }
 
 body.dark {
-    --bg-color: black;
+    --bg-color: #0B1F33;
     --text-color:  #E2E8F0;
-    --paragraph-color: #475569;
     --primary-color: #FF6B00;
     --secondary-color: #0B1F33;
     --heading-font: "Cinzel", serif;
@@ -55,7 +53,7 @@ body{
     color: #FF6B00;
 }
 .hero p{
-    color: var(--paragraph-color);
+    color: var(--text-color);
     font-family: var(--body-font);
     line-height: 1.9;
 
@@ -118,12 +116,12 @@ body{
 }
 .hero-title h3{
     font-size: 22px;
-    color: var(--paragraph-color);
+    color: var(--text-color);
     margin-bottom: 5px;
 }
 .hero-title span{
     font-size: 10px;
-    color: var(--paragraph-color);
+    color: var(--text-color);
     letter-spacing: 1px;
 }
 .services{
@@ -149,7 +147,7 @@ body{
     color: #FF6B00;
 }
 .services p{
-    color: var(--paragraph-color);
+    color: var(--text-color);
     font-family: var(--body-font);
     line-height: 1.9;
 
@@ -206,14 +204,6 @@ body{
 .services-content{
     padding: 25px 23px 27px;
 }
-.services-label{
-    display: block;
-    margin-bottom: 11px;
-    color: var(--pp-accent);
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-}
 .services-content h3{
     margin-bottom: 11px;
     color: var(--primary-color);
@@ -225,6 +215,7 @@ body{
     min-height: 76px;
     margin-bottom: 19px;
     font-size: 13px;
+    color: #475569;
     font-family: var(--body-font);
 }
 .services-text-link{
@@ -282,7 +273,7 @@ body{
 .page2-content p{
     line-height: 1.8;
     font-size: 16px;
-    color: var(--paragraph-color);
+    color: var(--text-color);
     font-family: var(--body-font);
     margin-bottom: 14px;
 }
@@ -326,7 +317,7 @@ body{
     color:#FF6B00;
 }
 .work p{
-    color: var(--paragraph-color);
+    color: var(--text-color);
     font-family: var(--body-font);
     line-height: 1.9;
 }
@@ -380,6 +371,7 @@ body{
 }
 .work-card p{
       font-family: var(--body-font);
+      color: #475569;
 }
 .work-btn{
     margin-top: 25px;
@@ -419,7 +411,7 @@ body{
 }
 
 .action-heading p {
-    color: var(--paragraph-color);
+    color: var(--text-color);
     font-family: var(--body-font);
     line-height: 1.9;
 }
@@ -502,14 +494,14 @@ body{
 }
 
 .action-overlay span {
-    color: #e5e5e5;
+    color: #FF6B00;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 2px;
 }
 
 .action-overlay h3 {
-    color: #ffffff;
+    color: #E2E8F0;
     font-size: 23px;
     font-weight: 700;
     margin: 10px 0;
@@ -522,7 +514,7 @@ body{
 }
 
 .action-overlay a {
-    color: var(--secondary-color);
+    color: #FF6B00;
     font-weight: 700;
     text-decoration: none;
 }
@@ -557,7 +549,7 @@ body{
     margin-bottom: 15px;
 }
 .customer p{
-    color: var(--paragraph-color);
+    color: var(--text-color);
     font-family: var(--body-font);
     line-height: 1.9;
 }
@@ -677,7 +669,7 @@ body{
     margin-bottom: 15px;
 }
 .quality p{
-    color: var(--paragraph-color);
+    color: var(--text-color);
     font-family: var(--body-font);
     line-height: 1.9;
 }
@@ -723,7 +715,7 @@ body{
 }
 
 .why-item p {
-    color: var(--paragraph-color);
+    color: var(--text-color);
     line-height: 1.8;
     margin: 0;
 }
@@ -783,7 +775,7 @@ body{
 
 .why-badge span {
     font-size: 12px;
-    color: var(--paragraph-color);
+    color: var(--text-color);
 }
 
 .cta-section {

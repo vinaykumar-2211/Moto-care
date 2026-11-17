@@ -35,10 +35,6 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* =========================================
-   BLOG DETAILS PAGE
-========================================= */
-
 .bd-hero,
 .bd-section {
     font-family: var(--body-font);
@@ -63,15 +59,7 @@ body {
         url("images/blog.jpg") center/cover no-repeat;
 }
 
-.bd-hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        0deg,
-        rgba(11, 31, 51, 0.25),
-        transparent
-    );
-}
+
 
 .bd-hero-content {
     position: relative;
@@ -129,10 +117,6 @@ body {
 }
 
 
-/* =========================================
-   MAIN LAYOUT
-========================================= */
-
 .bd-section {
     padding: 75px 8%;
     background: var(--bg-color);
@@ -164,10 +148,6 @@ body {
 }
 
 
-/* =========================================
-   FEATURED IMAGE
-========================================= */
-
 .bd-featured-image {
     width: 100%;
     height: 390px;
@@ -188,10 +168,6 @@ body {
 }
 
 
-/* =========================================
-   TAGS AND INTRODUCTION
-========================================= */
-
 .bd-tags {
     display: flex;
     gap: 10px;
@@ -201,8 +177,8 @@ body {
 
 .bd-tags span {
     padding: 6px 12px;
-    background: var(--primary-color);
-    color: var(--text-color);
+   
+    color: var(--primary-color);
     border-radius: 4px;
     font-size: 10px;
     font-weight: 700;
@@ -216,7 +192,7 @@ body {
 }
 
 .bd-intro {
-    border-left: 4px solid var(--secondary-color);
+    border-left: 4px solid var(--primary-color);
     background: var(--bg-color);
     padding: 18px 22px;
     margin: 20px 0;
@@ -228,16 +204,11 @@ body {
 
 .bd-description,
 .bd-content-section p {
-    color: var(--paragraph-color);
+    color: var(--text-color);
     font-size: 14px;
     line-height: 1.9;
     margin-bottom: 18px;
 }
-
-
-/* =========================================
-   TABLE OF CONTENTS
-========================================= */
 
 .bd-toc {
     border: 1px solid var(--border-color, #E2E8F0);
@@ -250,19 +221,22 @@ body {
 .bd-toc h3 {
     font-size: 19px;
     margin-bottom: 15px;
+    color: var(--primary-color);
 }
 
 .bd-toc h3 i {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-right: 8px;
 }
 
 .bd-toc ul {
     list-style: none;
+  
 }
 
 .bd-toc li {
     border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+      
 }
 
 .bd-toc li:last-child {
@@ -272,9 +246,10 @@ body {
 .bd-toc a {
     display: block;
     padding: 11px 0;
-    color: var(--paragraph-color);
+    color: var(--text-color);
     font-size: 13px;
     transition: 0.3s;
+    text-decoration: none;
 }
 
 .bd-toc a:hover {
@@ -282,10 +257,6 @@ body {
     padding-left: 8px;
 }
 
-
-/* =========================================
-   ARTICLE CONTENT SECTIONS
-========================================= */
 
 .bd-content-section {
     margin: 55px 0;
@@ -317,10 +288,6 @@ body {
 }
 
 
-/* =========================================
-   INFORMATION CARDS
-========================================= */
-
 .bd-info-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -343,7 +310,7 @@ body {
 
 .bd-info-card i {
     font-size: 25px;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-bottom: 12px;
 }
 
@@ -358,10 +325,6 @@ body {
 }
 
 
-/* =========================================
-   CHECK LIST
-========================================= */
-
 .bd-check-list {
     list-style: none;
     margin: 20px 0;
@@ -371,7 +334,7 @@ body {
     display: flex;
     gap: 12px;
     align-items: flex-start;
-    color: var(--paragraph-color);
+    color: var(--text-color);
     font-size: 14px;
     margin-bottom: 13px;
 }
@@ -380,14 +343,11 @@ body {
     content: "\f00c";
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
-    color: var(--text-color);
+    color: var(--primary-color);
     margin-top: 3px;
 }
 
 
-/* =========================================
-   EXPERT TIP
-========================================= */
 
 .bd-expert-tip {
     display: flex;
@@ -396,14 +356,14 @@ body {
     padding: 22px;
     margin: 35px 0;
     background: var(--bg-color);
-    border-left: 4px solid var(--secondary-color);
+    border-left: 4px solid var(--primary-color);
     box-shadow: 0 3px 18px rgba(11, 31, 51, 0.06);
     border-radius: 5px;
 }
 
 .bd-expert-tip i {
     font-size: 24px;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .bd-expert-tip p {
@@ -414,9 +374,6 @@ body {
 }
 
 
-/* =========================================
-   FINAL THOUGHTS
-========================================= */
 
 .bd-final {
     padding: 30px;
@@ -427,7 +384,7 @@ body {
 
 .bd-final > span {
     font-size: 10px;
-    color: var(--secondary-color);
+    color: #FF6B00;
     font-weight: 700;
     letter-spacing: 2px;
 }
@@ -440,32 +397,11 @@ body {
 .bd-final p {
     font-size: 14px;
     line-height: 1.9;
-    color: var(--paragraph-color);
+    color: var(--text-color);
     margin-bottom: 22px;
 }
 
-.bd-primary-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 22px;
-    background: var(--primary-color);
-    color: #FFFFFF;
-    border-radius: 5px;
-    font-size: 13px;
-    font-weight: 700;
-    transition: 0.3s;
-}
 
-.bd-primary-btn:hover {
-    background: var(--secondary-color);
-    color: #FFFFFF;
-}
-
-
-/* =========================================
-   TAGS AND SOCIAL SHARE
-========================================= */
 
 .bd-post-bottom {
     display: flex;
@@ -494,7 +430,6 @@ body {
 .bd-post-tags span {
     padding: 5px 10px;
     font-size: 11px;
-    background: var(--text-color);
     color: var(--primary-color);
     border-radius: 4px;
 }
@@ -508,6 +443,7 @@ body {
     color: #FFFFFF;
     border-radius: 4px;
     transition: 0.3s;
+    text-decoration: none;
 }
 
 .bd-share a:hover {
@@ -516,9 +452,6 @@ body {
 }
 
 
-/* =========================================
-   AUTHOR
-========================================= */
 
 .bd-author {
     display: flex;
@@ -549,17 +482,15 @@ body {
 .bd-author h3 {
     font-size: 18px;
     margin: 5px 0;
+
 }
 
 .bd-author p {
-    color: var(--paragraph-color);
+    color: var(--text-color);
     font-size: 13px;
 }
 
 
-/* =========================================
-   RELATED ARTICLES
-========================================= */
 
 .bd-related {
     margin-top: 55px;
@@ -591,7 +522,9 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
-
+.bd-related-grid a{
+    text-decoration: none;
+}
 .bd-related-card {
     border: 1px solid rgba(128, 128, 128, 0.2);
     border-radius: 8px;
@@ -618,6 +551,7 @@ body {
     color: #FF6B00;
     font-size: 10px;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .bd-related-card h3 {
@@ -632,9 +566,6 @@ body {
 }
 
 
-/* =========================================
-   SIDEBAR
-========================================= */
 
 .bd-sidebar {
     display: flex;
@@ -661,12 +592,12 @@ body {
     display: block;
     width: 42px;
     height: 2px;
-    background: var(--secondary-color);
+    background: #FF6B00;
     margin-top: 10px;
 }
 
 
-/* SEARCH */
+
 
 .bd-search {
     display: flex;
@@ -706,11 +637,9 @@ body {
 }
 
 
-/* ABOUT CARD */
-
 .bd-about-card {
     padding: 28px 24px;
-    background: var(--primary-color);
+    background: var(--secondary-color);
     border-radius: 7px;
     position: relative;
     overflow: hidden;
@@ -718,7 +647,7 @@ body {
 
 .bd-about-card > span,
 .bd-sidebar-cta > span {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -744,7 +673,6 @@ body {
 }
 
 
-/* CATEGORIES */
 .bd-categories h3{
     color: #FF6B00;
 }
@@ -767,6 +695,7 @@ body {
 .bd-categories li a {
     color: var(--text-color);
     transition: 0.3s;
+    text-decoration: none;
 }
 
 .bd-categories li a:hover {
@@ -779,8 +708,10 @@ body {
     font-weight: 700;
 }
 
+.bd-sidebar-box a{
+    text-decoration: none;
+}
 
-/* RECENT ARTICLES */
 
 .bd-recent {
     display: flex;
@@ -814,11 +745,10 @@ body {
 }
 
 .bd-recent:hover h4 {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 
-/* SIDEBAR CTA */
 
 .bd-sidebar-cta {
     padding: 28px 23px;
@@ -828,7 +758,7 @@ body {
             rgba(11, 31, 51, 0.94),
             rgba(11, 31, 51, 0.90)
         ),
-        url("images/blog-maintenance.jpg") center/cover;
+        url("images/mechanic3.png") center/cover;
 }
 .bd-sidebar-cta span{
     color: #FF6B00;
@@ -848,10 +778,8 @@ body {
 
 
 
-/* CONTACT */
-
 .bd-contact p {
-    color: var(--paragraph-color);
+    color: var(--text-color);
     font-size: 13px;
     margin-bottom: 15px;
 }
@@ -861,70 +789,6 @@ body {
     font-size: 13px;
     font-weight: 700;
 }
-
-
-/* =========================================
-   DARK MODE
-========================================= */
-
-body.dark .bd-hero {
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.82),
-            rgba(0, 0, 0, 0.72)
-        ),
-        url("images/blog-maintenance.jpg") center/cover no-repeat;
-}
-
-body.dark .bd-article h2,
-body.dark .bd-article h3,
-body.dark .bd-article h4,
-body.dark .bd-sidebar h3,
-body.dark .bd-sidebar h4 {
-    color: var(--text-color);
-}
-
-body.dark .bd-about-card,
-body.dark .bd-sidebar-cta {
-    background-color: #0B1F33;
-}
-
-body.dark .bd-intro,
-body.dark .bd-expert-tip {
-    background: #17212B;
-}
-
-body.dark .bd-final {
-    background: #17212B;
-}
-
-body.dark .bd-search input {
-    background: #17212B;
-    color: #E2E8F0;
-}
-
-body.dark .bd-info-card,
-body.dark .bd-sidebar-box,
-body.dark .bd-toc,
-body.dark .bd-related-card {
-    background: #17212B;
-}
-
-body.dark .bd-description,
-body.dark .bd-content-section p,
-body.dark .bd-check-list li,
-body.dark .bd-toc a,
-body.dark .bd-contact p,
-body.dark .bd-final p {
-    color: #CBD5E1;
-}
-
-
-/* =========================================
-   RESPONSIVE DESIGN
-========================================= */
-
-/* Laptop */
 
 @media (max-width: 1200px) {
 
